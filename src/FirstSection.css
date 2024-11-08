@@ -1,0 +1,111 @@
+
+/* src/FirstSection.css */
+.first-section {
+    display: flex;
+    height: 100%; /* Full height of the parent */
+    width: 100%; /* Ensure it takes full width of .cv */
+}
+
+/*GreySection of CV  */
+.greySection {
+    height: 100%;
+    width: 300px; /* Fixed width to trigger horizontal scrolling */
+    background-color: rgb(78, 76, 76); /* Grey color */    
+    grid-template-rows: 30% 40% 30%; 
+    justify-content: space-around;    
+
+}
+
+.CV_image {
+border-radius: 50%;
+width: 80%;
+margin: 10px auto;
+}
+
+.aboutSection {
+height: 50%;
+}
+
+/*End of GreySection of CV  */
+
+/*Rightside*/
+.rightSide {
+    background-color: whitesmoke; /* Background color for visibility */
+    height: 100%;
+    flex: 1; /* Take the remaining width */   
+    grid-template-rows: 30% 40% 30%;
+    color: black;
+}
+
+.firstRowrightSide {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+}
+
+.titleFirstRow {
+font-weight: bold;
+}
+
+.firstLineWorkExp , .secondLineWorkExp, .thirdLineWorkExp {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: top;
+}
+
+.firstLineWorkExp > div {
+width: 50%;
+margin: 10px 0;
+}
+
+.secondLineWorkExp > div {
+width: 50%;
+margin: 10px 0;
+}
+
+.thirdLineWorkExp > div {
+width: 50%;
+margin: 10px 0;
+}
+
+.title {
+font-weight: bold;
+}
+
+.grey_style_line {
+height: 1px;
+width: 80%;
+background-color: grey;
+margin: 20px auto;
+box-shadow: 1px 2px 10px 1px;
+}
+/*End of Rightside*/
+
+/* Responsive adjustments */
+@media screen and (max-width: 1000px) {
+    .first-section {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .greySection {
+        width: 100%; /* Full width on mobile */
+        height: auto;
+    }
+
+    .rightSide {
+        width: 100%; /* Full width on mobile */
+        height: auto;
+    }
+
+    .firstLineWorkExp > div {
+        width: 100%;
+        }
+
+    .secondLineWorkExp > div {
+        width: 100%;
+         }
+    .thirdLineWorkExp > div {
+        width: 100%;
+    }
+}
